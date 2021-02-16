@@ -1,3 +1,5 @@
+$('.followingContentWrapper').hide();
+
 function modalProfileLoad(user) {
   var hobby, food, subject, year, email;
   let rootRef = firebase.database().ref();
@@ -103,6 +105,7 @@ userModalProfileLoad();
 function aboutPageOnload() {
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+      $('.followingContentWrapper').show();
       user = firebase.auth().currentUser;
       var name = user.displayName;
       var followingRef = firebase
