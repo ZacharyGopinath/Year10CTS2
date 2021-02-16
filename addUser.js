@@ -126,7 +126,7 @@ function signIn(email, password){
                 yearRef.on('value', (snapshot) => {
                     year = snapshot.val();
                 })
-                window.location.replace('search.html');
+                window.location.replace('search');
 
             })
             .catch((error) => {
